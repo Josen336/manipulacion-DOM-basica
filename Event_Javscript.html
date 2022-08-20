@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos coon JAvascript</h1>
+
+    <form id="form">
+        <input id="calculo1" type="text" placeholder="Escribe algo aqui">
+        <input type="text" id="calculo2" placeholder="Escribe algo aqui">
+        <button id="btnCalcular" type="button">Calcular</button>
+
+        <p id="Result"></p>
+    </form>
+     
+    
+
+
+
+
+
+    <script>
+        const input1 = document.querySelector('#calculo1');
+        const input2 = document.querySelector('#calculo2');
+        const pResult =  document.querySelector('#Result');
+
+
+        document.querySelector('#btnCalcular').addEventListener("click", function(){
+            const SumarInputs= Number(input1.value) +parseInt(input2.value);
+            console.log(SumarInputs);
+            pResult.innerText="Resultado: " + SumarInputs;
+        });
+        
+        
+        document.getElementById("form").addEventListener("click", function(event){
+            console.log({event});
+            event.preventDefault();
+        });
+
+
+         
+
+       
+
+
+        
+       
+ 
+
+        
+
+    </script>
+</body>
+</html>
